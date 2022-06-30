@@ -2,7 +2,7 @@
   "name": "hello-world",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "server/app.js",
   "scripts": {
     "start:client": "cd client && npm start",
     "start:server": "cd server && npm start",
