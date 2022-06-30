@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm start\" \"npm run local\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && npm install && npm run local"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm start && npm run local"
   },
   "engines": {
     "node": "16.15.1",
