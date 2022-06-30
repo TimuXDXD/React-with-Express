@@ -4,8 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const path = require("path");
 const compression = require("compression");
-// const PORT = process.env.PORT || 5000;
-const PORT = process.env.PORT || process.env.REACT_APP_PORT;
+const PORT = process.env.PORT || 8080;
 const app = express();
 app.use(compression());
 app.use((req, res, next) => {
@@ -45,7 +44,7 @@ if (process.env.NODE_ENV === "production") {
   // Serve any static files
   app.use(express.static(path.resolve(__dirname, "../client/build")));
    // Handle React routing, return all requests to React app  app.get("*", function (req, res) {
-  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
 }
 app.listen(PORT, () => console.info(`Listening on port ${PORT}`));
 
