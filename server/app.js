@@ -4,7 +4,8 @@ const cors = require("cors");
 const helmet = require("helmet");
 const path = require("path");
 const compression = require("compression");
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
+const PORT = process.env.REACT_APP_PROXY_HOST || 5000;
 const app = express();
 app.use(compression());
 app.use((req, res, next) => {
