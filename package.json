@@ -1,56 +1,26 @@
 {
   "name": "hello-world",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start":"node backend/server.js",
-    "local": "react-scripts start",
-    "server": "nodemon backend/server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "concurrently \"npm start\" \"npm run local\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm start && npm run local"
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
+    "dev:server": "cd server && npm run dev",
+    "start": "node server/app.js",
+    "start:all": "concurrently \"npm run dev:server\" \"npm run start:client\"",
+    "heroku-postbuild": "cd server && npm install && cd ../client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": "16.15.1",
-    "npm": "8.13.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimuXDXD/React-with-Express.git"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimuXDXD/React-with-Express/issues"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "axios": "^0.27.2",
-    "body-parser": "^1.20.0",
-    "concurrently": "^7.2.2",
-    "cors": "^2.8.5",
-    "express": "^4.18.1",
-    "mongoose": "^6.4.1",
-    "nodemon": "^2.0.18"
-  },
-  "proxy": "http://localhost:5000"
+  "homepage": "https://github.com/TimuXDXD/React-with-Express#readme"
 }
