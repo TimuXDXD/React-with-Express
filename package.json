@@ -12,6 +12,10 @@
     "heroku-postbuild": "cd server && npm install && cd ../client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+   "node": "18.4.0",
+   "npm": "8.13.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TimuXDXD/React-with-Express.git"
