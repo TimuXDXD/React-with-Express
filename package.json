@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "enginers": {
+  "engines": {
     "node": "18.4.0",
     "npm": "8.13.2"
   },
