@@ -35,5 +35,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:$(env | grep PORT | cut -d '=' -f2)"
+  "proxy": "https://shorten-url-by-timu.herokuapp.com/"
 }
